@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandini's Java Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-inner">
+        <div class="header-left">
+          <h1>Nandini's <span>Java</span> Journey</h1>
+          <p>Live tracker — auto-syncs with GitHub. Click any file to get an AI explanation.</p>
+        </div>
+        <a class="repo-link" href="https://github.com/nallaballenandini24-hue/Java-Practice" target="_blank">
+          ⎇ &nbsp;View on GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-card c1">
+        <div class="stat-num" id="totalFiles">—</div>
+        <div class="stat-label">Programs written</div>
+      </div>
+      <div class="stat-card c2">
+        <div class="stat-num" id="topicsDone">—</div>
+        <div class="stat-label">Topics covered</div>
+      </div>
+      <div class="stat-card c3">
+        <div class="stat-num" id="topicsLeft">—</div>
+        <div class="stat-label">Topics remaining</div>
+      </div>
+      <div class="stat-card c4">
+        <div class="stat-num" id="progressPct">—</div>
+        <div class="stat-label">DSA progress</div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-section">
+      <div class="progress-header">
+        <span>Overall DSA Coverage</span>
+        <span id="progressLabel">calculating...</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Topic cards -->
+    <div id="content">
+      <div class="loading"><span class="dot-anim">Fetching from GitHub</span></div>
+    </div>
+  </div>
+
+  <!-- Side panel for AI explanation -->
+  <div class="panel-overlay" id="panelOverlay"></div>
+  <div class="side-panel" id="sidePanel">
+    <div class="panel-header">
+      <div>
+        <div class="panel-filename" id="panelFilename">—</div>
+        <div class="panel-subtitle">AI Explanation</div>
+      </div>
+      <button class="panel-close" id="panelClose">✕</button>
+    </div>
+    <div class="panel-code-block">
+      <pre id="panelCode"><code>// loading code...</code></pre>
+    </div>
+    <div class="panel-explanation" id="panelExplanation">
+      <div class="explain-loading"><span class="dot-anim">Gemma is reading your code</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      Auto-synced with
+      <a href="https://github.com/nallaballenandini24-hue/Java-Practice" target="_blank">
+        nallaballenandini24-hue/Java-Practice
+      </a>
+      via GitHub API · Explanations by Gemma (OpenRouter)
+    </div>
+  </footer>
+  <script src="config.js"></script>
+  <script src="gemma.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
